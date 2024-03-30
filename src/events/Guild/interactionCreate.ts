@@ -11,7 +11,7 @@ client.on('interactionCreate', async (interaction) => {
 
         if (!command) return;
         
-        await checkLvl(interaction);
+        //await checkLvl(interaction);
 
         try {
             command?.run(client, interaction);
