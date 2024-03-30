@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "build": "tsc & node dist ."
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7",
+    "tsc": "^2.0.4",
+    "typescript": "^5.4.3"
+  },
+  "name": "friren",
+  "version": "0.0.1",
+  "description": "Bot for Lunar squad ",
+  "main": "./dist/index.js",
+  "author": "vexify",
+  "license": "MIT",
+  "private": true
+}
