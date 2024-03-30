@@ -1,5 +1,6 @@
 import { ButtonBuilder, ButtonInteraction } from "discord.js";
 import { client } from "../..";
+import checkLvl from "../../database/functions/checkLvl";
 
 client.on('interactionCreate', async (interaction) => {
     if (!interaction.inGuild()) return;
@@ -9,6 +10,8 @@ client.on('interactionCreate', async (interaction) => {
         const command = client.commands.get(interaction.commandName);
 
         if (!command) return;
+        
+        await checkLvl(interaction);
 
         try {
             command?.run(client, interaction);
